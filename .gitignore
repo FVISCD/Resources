@@ -1,0 +1,17 @@
+# Terraform 관련 무시할 항목
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# 로컬 설정 파일 무시
+*.tfvars
+*.tfvars.json
+
+# 편집기 관련
+.vscode/
+.idea/
+*.swp
+
+# macOS 관련
+.DS_Store
+
