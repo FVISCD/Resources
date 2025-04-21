@@ -26,3 +26,12 @@ module "compute" {
     usermod -aG google-sudoers root
   EOT
 }
+
+module "rdb_instance" {
+  source          = "../../modules/rdb_instance"
+  name            = "dev-postgres"
+  region          = var.region
+  vpc_id          = module.network.vpc_id
+  vpc_self_link   = module.network.vpc_self_link
+  user_password   = var.db_password
+}
